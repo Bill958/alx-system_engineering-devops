@@ -16,7 +16,7 @@ def number_of_subscribers(subreddit):
         int: The number of subscribers of the subreddit. If the subreddit is invalid or an error occurs, returns 0.
     """
     # URL for the subreddit's information
-    url = f"https://www.reddit.com/r/{subreddit}/about.json"
+    url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
     headers = {'User-Agent': 'Chrome/billreddit'}
 
     # Send a GET request to the Reddit API
@@ -29,6 +29,5 @@ def number_of_subscribers(subreddit):
         return results.get("subscribers")
     else:
         # If the subreddit is invalid or any other error occurs, return 0
-        print("Error:", response.status_code)
         return 0
 
