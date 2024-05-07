@@ -11,7 +11,7 @@ def top_ten(subreddit):
     """
     # URL for the subreddit's hot posts
     url = f"https://www.reddit.com/r/{subreddit}/hot.json"
-    headers = {'User-Agent': 'Advanced API v 6/bill958'}
+    headers = {'User-Agent': 'AdvancedAPI/1.0/bill958'}
 
     # Send a GET request to the Reddit API
     response = requests.get(url, headers=headers,allow_redirects=False)
