@@ -7,7 +7,13 @@ import requests
 
 def number_of_subscribers(subreddit):
     """
-        Returns:The number of subscribers of the subreddit. If the subreddit is invalid or an error occurs, returns 0.
+    Queries the Reddit API and returns the number of subscribers for a given subreddit.
+    
+    Args:
+        subreddit (str): The name of the subreddit.
+        
+    Returns:
+        int: The number of subscribers of the subreddit. If the subreddit is invalid or an error occurs, returns 0.
     """
     # URL for the subreddit's information
     url = f"https://www.reddit.com/r/{subreddit}/about.json"
