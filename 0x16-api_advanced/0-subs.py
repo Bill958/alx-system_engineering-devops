@@ -33,11 +33,3 @@ def number_of_subscribers(subreddit):
         print("Error:", response.status_code)
         return 0
 
-# Testing the function
-if __name__ == "__main__":
-    import sys
-    if len(sys.argv) < 2:
-        print("Please pass an argument for the subreddit to search.")
-    else:
-        print("{:d}".format(number_of_subscribers(sys.argv[1])))
-
